@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 16-05-2017 a las 08:49:50
+-- Tiempo de generación: 16-05-2017 a las 09:04:18
 -- Versión del servidor: 5.5.16
 -- Versión de PHP: 5.3.8
 
@@ -60,14 +60,7 @@ CREATE TABLE IF NOT EXISTS `marca` (
   `idMarca` int(11) NOT NULL AUTO_INCREMENT,
   `marca` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`idMarca`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
-
---
--- Volcado de datos para la tabla `marca`
---
-
-INSERT INTO `marca` (`idMarca`, `marca`) VALUES
-(1, 'sdfgdag');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -95,14 +88,7 @@ CREATE TABLE IF NOT EXISTS `materiales` (
   UNIQUE KEY `idMarca` (`idMarca`),
   UNIQUE KEY `idAutorizador` (`idAutorizador`),
   UNIQUE KEY `idUbicacion` (`idUbicacion`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
-
---
--- Volcado de datos para la tabla `materiales`
---
-
-INSERT INTO `materiales` (`idmaterial`, `aparato`, `idProveedor`, `idMarca`, `modelo`, `numSerie`, `cantidad`, `numInterno`, `idAutorizador`, `idUbicacion`, `garantia`, `fechaBaja`, `observaciones`, `fechaEntrada`) VALUES
-(1, 'fgsdfhgfj', '1', 1, 'hjh', 'ghjfhjg', 3, 'gfhdfsdf', '123', 1, 'ghdfdf', '2017-05-31', 'dfgsdfgsdf', '2017-05-02');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -146,13 +132,6 @@ CREATE TABLE IF NOT EXISTS `proveedores` (
   `nombre` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`idProveedor`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Volcado de datos para la tabla `proveedores`
---
-
-INSERT INTO `proveedores` (`idProveedor`, `nombre`) VALUES
-('1', 'sdafsdfsd');
 
 -- --------------------------------------------------------
 
@@ -210,14 +189,7 @@ CREATE TABLE IF NOT EXISTS `ubicacion` (
   `idUbicacion` int(11) NOT NULL AUTO_INCREMENT,
   `ubicacion` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`idUbicacion`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
-
---
--- Volcado de datos para la tabla `ubicacion`
---
-
-INSERT INTO `ubicacion` (`idUbicacion`, `ubicacion`) VALUES
-(1, 'sdagfasdf');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -230,18 +202,9 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `nombre` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `clave` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   `fechaNacimiento` date NOT NULL,
-  `tipoUsuario` varchar(9) COLLATE utf8_unicode_ci NOT NULL,
+  `tipoUsuario` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`dni`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Volcado de datos para la tabla `usuarios`
---
-
-INSERT INTO `usuarios` (`dni`, `nombre`, `clave`, `fechaNacimiento`, `tipoUsuario`) VALUES
-('123', 'babuino', '123', '2017-05-16', 'ALUMNO'),
-('12312312j', 'Hola', '123', '0000-00-00', 'profesor'),
-('1231232D', 'Hola', '123', '2017-05-16', 'profesor');
 
 --
 -- Restricciones para tablas volcadas
